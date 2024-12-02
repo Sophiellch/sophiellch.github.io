@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site web de Sophie</title>
+    <style>
+        /* Assure que html et body occupent toute la hauteur de l'écran */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            color: black; /* Texte noir*/
+        }
+
+        /* Ajoute l'image de fond avec un pseudo-élément */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Le contenu est aligné en haut */
+            align-items: center;
+            text-align: center; /* Centre le titre */
+            padding-top: 20px; /* Un peu d'espace au-dessus */
+            position: relative; /* Nécessaire pour positionner le pseudo-élément */
+        }
+
+        /* Pseudo-élément pour l'image de fond */
+        body::before {
+            content: ""; /* Nécessaire pour afficher le pseudo-élément */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('img.jpg') no-repeat center center fixed; /* Lien de l'image */
+            background-size: cover; /* L'image couvre tout l'écran */
+            background-blend-mode: overlay; /* Fusionne l'image avec une couleur */
+            opacity: 0.8; /* Applique l'opacité à l'image */
+            z-index: -1; /* L'image est placée derrière le contenu */
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-top: 0; /* Supprime l'espacement au-dessus du titre */
+            text-align: center; /* Centre le titre */
+        }
+
+        /* Pour aligner le texte à gauche */
+        .left-align {
+            text-align: left; /* Aligne le texte à gauche */
+            width: 80%; /* Limite la largeur pour que le texte ne s'étende pas sur toute la largeur de l'écran */
+            margin-top: 10px;
+        }
+
+        p, h2 {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenue sur le site de Sophie</h1>
+    <div class="left-align">
+        <p>Tu y trouveras des informations sur la Wild</p>
+        <h2>C'est incroyable ce qu'on peut faire avec HTML</h2>
+        <p>Nous allons commencer</p>
+        <a href="http://www.wildcodeschool.com">Voici le lien pour accéder aux infos de la Wild</a>
+    </div>
+</body>
+</html>
